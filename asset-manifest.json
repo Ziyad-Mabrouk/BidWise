@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/BidWise/static/css/main.99d6a596.css",
-    "main.js": "/BidWise/static/js/main.593bd424.js",
+    "main.css": "/BidWise/static/css/main.f9dff73c.css",
+    "main.js": "/BidWise/static/js/main.894a0f92.js",
     "static/media/logo.png": "/BidWise/static/media/logo.c9ee92bfa574d6217832.png",
+    "static/media/google_logo.png": "/BidWise/static/media/google_logo.81b266ef71e5ed02bccd.png",
     "static/media/3d_bid.png": "/BidWise/static/media/3d_bid.e97ab3aa0abc85a516a7.png",
     "static/media/3d_gavel.png": "/BidWise/static/media/3d_gavel.657ef0ac54682c9ba0a0.png",
     "static/media/product 1.png": "/BidWise/static/media/product 1.fbfcde61e30a79f0e3df.png",
@@ -13,11 +14,11 @@
     "static/media/heart-hover.svg": "/BidWise/static/media/heart-hover.18cfd976f12899877d6b.svg",
     "static/media/heart-normal.svg": "/BidWise/static/media/heart-normal.6429d35bc326b9ae3b0ccef186d3d8a7.svg",
     "static/media/bidwise_name.svg": "/BidWise/static/media/bidwise_name.fc410f742d25e1b3fa2dbabd449163fa.svg",
-    "main.99d6a596.css.map": "/BidWise/static/css/main.99d6a596.css.map",
-    "main.593bd424.js.map": "/BidWise/static/js/main.593bd424.js.map"
+    "main.f9dff73c.css.map": "/BidWise/static/css/main.f9dff73c.css.map",
+    "main.894a0f92.js.map": "/BidWise/static/js/main.894a0f92.js.map"
   },
   "entrypoints": [
-    "static/css/main.99d6a596.css",
-    "static/js/main.593bd424.js"
+    "static/css/main.f9dff73c.css",
+    "static/js/main.894a0f92.js"
   ]
 }
