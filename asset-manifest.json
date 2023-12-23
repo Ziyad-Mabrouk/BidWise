@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/bidwise/home/static/css/main.70158926.css",
-    "main.js": "/bidwise/home/static/js/main.95b9e4b1.js",
-    "static/media/logo.png": "/bidwise/home/static/media/logo.c9ee92bfa574d6217832.png",
-    "static/media/3d_bid.png": "/bidwise/home/static/media/3d_bid.e97ab3aa0abc85a516a7.png",
-    "static/media/3d_gavel.png": "/bidwise/home/static/media/3d_gavel.657ef0ac54682c9ba0a0.png",
-    "static/media/product 1.png": "/bidwise/home/static/media/product 1.fbfcde61e30a79f0e3df.png",
-    "static/media/logo.svg": "/bidwise/home/static/media/logo.ab52c946ecd820d9970b946773655721.svg",
-    "static/media/product 2.png": "/bidwise/home/static/media/product 2.7f67a845e777ab13783d.png",
-    "index.html": "/bidwise/home/index.html",
-    "static/media/heart-active.svg": "/bidwise/home/static/media/heart-active.6df34aa3fdcc624b6e550e1dd409c435.svg",
-    "static/media/heart-hover.svg": "/bidwise/home/static/media/heart-hover.18cfd976f12899877d6b.svg",
-    "static/media/heart-normal.svg": "/bidwise/home/static/media/heart-normal.6429d35bc326b9ae3b0ccef186d3d8a7.svg",
-    "static/media/bidwise_name.svg": "/bidwise/home/static/media/bidwise_name.fc410f742d25e1b3fa2dbabd449163fa.svg",
-    "main.70158926.css.map": "/bidwise/home/static/css/main.70158926.css.map",
-    "main.95b9e4b1.js.map": "/bidwise/home/static/js/main.95b9e4b1.js.map"
+    "main.css": "/BidWise/static/css/main.99d6a596.css",
+    "main.js": "/BidWise/static/js/main.593bd424.js",
+    "static/media/logo.png": "/BidWise/static/media/logo.c9ee92bfa574d6217832.png",
+    "static/media/3d_bid.png": "/BidWise/static/media/3d_bid.e97ab3aa0abc85a516a7.png",
+    "static/media/3d_gavel.png": "/BidWise/static/media/3d_gavel.657ef0ac54682c9ba0a0.png",
+    "static/media/product 1.png": "/BidWise/static/media/product 1.fbfcde61e30a79f0e3df.png",
+    "static/media/logo.svg": "/BidWise/static/media/logo.ab52c946ecd820d9970b946773655721.svg",
+    "static/media/product 2.png": "/BidWise/static/media/product 2.7f67a845e777ab13783d.png",
+    "index.html": "/BidWise/index.html",
+    "static/media/heart-active.svg": "/BidWise/static/media/heart-active.6df34aa3fdcc624b6e550e1dd409c435.svg",
+    "static/media/heart-hover.svg": "/BidWise/static/media/heart-hover.18cfd976f12899877d6b.svg",
+    "static/media/heart-normal.svg": "/BidWise/static/media/heart-normal.6429d35bc326b9ae3b0ccef186d3d8a7.svg",
+    "static/media/bidwise_name.svg": "/BidWise/static/media/bidwise_name.fc410f742d25e1b3fa2dbabd449163fa.svg",
+    "main.99d6a596.css.map": "/BidWise/static/css/main.99d6a596.css.map",
+    "main.593bd424.js.map": "/BidWise/static/js/main.593bd424.js.map"
   },
   "entrypoints": [
-    "static/css/main.70158926.css",
-    "static/js/main.95b9e4b1.js"
+    "static/css/main.99d6a596.css",
+    "static/js/main.593bd424.js"
   ]
 }
