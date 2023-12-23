@@ -13,7 +13,7 @@ const Footer = () => {
                 <h1 className="info">bidwise.contact@gmail.com</h1>
                 <h1 className="info">+212 637-452248</h1>
                 <h1 className="info">INPT, Av Allal Al Fassi, Madinat Al Irfane, Rabat, Maroc</h1>
-                <Link to='/' id="about-us-link">About Us</Link>
+                <Link to='/bidwise/home' id="about-us-link">About Us</Link>
             </div>
 
             <div className='send-message'>

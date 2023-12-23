@@ -10,10 +10,10 @@ const Navbar = () => {
             <img src={logo} alt='logo'/>
         </div>
         <div className='links'>
-            <Link to='/'>Home</Link>
-            <Link to='/'>Categories</Link>
-            <Link to='/'>Sell</Link>
-            <Link to='/'>About Us</Link>
+            <Link to='/bidwise/home'>Home</Link>
+            <Link to='/bidwise/home'>Categories</Link>
+            <Link to='/bidwise/home'>Sell</Link>
+            <Link to='/bidwise/home'>About Us</Link>
         </div>
         <div className='buttons'>
             <button id='login-button'>Login</button>
