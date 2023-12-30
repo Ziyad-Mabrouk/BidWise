@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/BidWise/static/css/main.cf2ca9c6.css",
-    "main.js": "/BidWise/static/js/main.f0f109b5.js",
+    "main.css": "/BidWise/static/css/main.d381f0b3.css",
+    "main.js": "/BidWise/static/js/main.9a38bb6a.js",
     "static/media/art.png": "/BidWise/static/media/art.0b4c908a8c6b480ca0bd.png",
     "static/media/logo.png": "/BidWise/static/media/logo.c9ee92bfa574d6217832.png",
     "static/media/google_logo.png": "/BidWise/static/media/google_logo.81b266ef71e5ed02bccd.png",
@@ -29,11 +29,11 @@
     "static/media/bidwise_name.svg": "/BidWise/static/media/bidwise_name.fc410f742d25e1b3fa2dbabd449163fa.svg",
     "static/media/down-arrow-hover.svg": "/BidWise/static/media/down-arrow-hover.4e2f4b82c9c3846fabb902dad7f16ec3.svg",
     "static/media/down-arrow.svg": "/BidWise/static/media/down-arrow.d6689c56b186ad757e35674b31bf6c1d.svg",
-    "main.cf2ca9c6.css.map": "/BidWise/static/css/main.cf2ca9c6.css.map",
-    "main.f0f109b5.js.map": "/BidWise/static/js/main.f0f109b5.js.map"
+    "main.d381f0b3.css.map": "/BidWise/static/css/main.d381f0b3.css.map",
+    "main.9a38bb6a.js.map": "/BidWise/static/js/main.9a38bb6a.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf2ca9c6.css",
-    "static/js/main.f0f109b5.js"
+    "static/css/main.d381f0b3.css",
+    "static/js/main.9a38bb6a.js"
   ]
 }
