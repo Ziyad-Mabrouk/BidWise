@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bottom_banner {
+    height: 290px;
+    background: rgb(255,255,255);
+    background: linear-gradient(60deg, rgba(255,255,255,1) 40%, #f9c76b9e 140%);
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+#btm_text {
+    position: relative;
+    font-size: 30px;
+    top: 60px;
+    left: 60px;
+    font-weight: 400;
+}
+
+#bid_img {
+    width: 300px;
+    height: 280px;
+    position: relative;
+    top: -80px;
+    left: 650px;
+}
+
+#create_account_button {
+    width: 300px;
+    height: 70px;
+    border-radius: 10px;
+    position: relative;
+    top: -150px;
+    left: 60px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    background: #0380DA;
+    background: linear-gradient(90deg, #6e057e 0%, #0380DA 100%);
+}
+
+#create_account_button:hover {
+    background: #0380DA;
+    background: linear-gradient(90deg, #912fa0 0%, #5db0ec 100%);
+    color: #fff;
+    text-decoration: none;
+}
+
+#create_account_button:active {
+    background: #0380DA;
+    background: linear-gradient(90deg, #6e057e 0%, #0380DA 100%);
+    color: #fff;
+    text-decoration: none;
+}
