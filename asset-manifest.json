@@ -1,7 +1,9 @@
 {
   "files": {
-    "main.css": "/BidWise/static/css/main.d381f0b3.css",
-    "main.js": "/BidWise/static/js/main.9a38bb6a.js",
+    "main.css": "/BidWise/static/css/main.20ba5956.css",
+    "main.js": "/BidWise/static/js/main.3088d316.js",
+    "static/media/verify-bot.png": "/BidWise/static/media/verify-bot.33ebbc58f279163d1794.png",
+    "static/media/happy-bot.png": "/BidWise/static/media/happy-bot.36968c4f4091a64e0e52.png",
     "static/media/art.png": "/BidWise/static/media/art.0b4c908a8c6b480ca0bd.png",
     "static/media/logo.png": "/BidWise/static/media/logo.c9ee92bfa574d6217832.png",
     "static/media/google_logo.png": "/BidWise/static/media/google_logo.81b266ef71e5ed02bccd.png",
@@ -11,10 +13,18 @@
     "static/media/furniture.png": "/BidWise/static/media/furniture.062346719db1fdc9e594.png",
     "static/media/electronics.png": "/BidWise/static/media/electronics.7b744992990302014839.png",
     "static/media/clothes.png": "/BidWise/static/media/clothes.ee3aca567f97d5ec5f2e.png",
+    "static/media/ultrasonic-sensor.png": "/BidWise/static/media/ultrasonic-sensor.911282baa2528722b0bb.png",
     "static/media/product 1.png": "/BidWise/static/media/product 1.fbfcde61e30a79f0e3df.png",
+    "static/media/bidwise.svg": "/BidWise/static/media/bidwise.ab52c946ecd820d9970b946773655721.svg",
     "static/media/logo.svg": "/BidWise/static/media/logo.ab52c946ecd820d9970b946773655721.svg",
+    "static/media/ziyad.jpeg": "/BidWise/static/media/ziyad.c5dde47f773d844066a7.jpeg",
+    "static/media/inpt.png": "/BidWise/static/media/inpt.ca9747bdade5e822f422.png",
+    "static/media/mohamed.jpeg": "/BidWise/static/media/mohamed.9ee0c6cb0592f61794c3.jpeg",
+    "static/media/ibrahim.jpg": "/BidWise/static/media/ibrahim.44654bc885685a2ffe82.jpg",
     "static/media/empty.png": "/BidWise/static/media/empty.1b8e3927aacd0720acb5.png",
     "static/media/setting.png": "/BidWise/static/media/setting.d6206d9fd32302e6436e.png",
+    "static/media/idriss.jpg": "/BidWise/static/media/idriss.3a1808b97d224683aa38.jpg",
+    "static/media/aimane.jpeg": "/BidWise/static/media/aimane.1a8b4214b59280e6169b.jpeg",
     "static/media/product 2.png": "/BidWise/static/media/product 2.7f67a845e777ab13783d.png",
     "static/media/others.png": "/BidWise/static/media/others.ab8cc6c52bdff70b89b2.png",
     "static/media/auction.png": "/BidWise/static/media/auction.e9cb36e545d8969d8fe5.png",
@@ -29,11 +39,11 @@
     "static/media/bidwise_name.svg": "/BidWise/static/media/bidwise_name.fc410f742d25e1b3fa2dbabd449163fa.svg",
     "static/media/down-arrow-hover.svg": "/BidWise/static/media/down-arrow-hover.4e2f4b82c9c3846fabb902dad7f16ec3.svg",
     "static/media/down-arrow.svg": "/BidWise/static/media/down-arrow.d6689c56b186ad757e35674b31bf6c1d.svg",
-    "main.d381f0b3.css.map": "/BidWise/static/css/main.d381f0b3.css.map",
-    "main.9a38bb6a.js.map": "/BidWise/static/js/main.9a38bb6a.js.map"
+    "main.20ba5956.css.map": "/BidWise/static/css/main.20ba5956.css.map",
+    "main.3088d316.js.map": "/BidWise/static/js/main.3088d316.js.map"
   },
   "entrypoints": [
-    "static/css/main.d381f0b3.css",
-    "static/js/main.9a38bb6a.js"
+    "static/css/main.20ba5956.css",
+    "static/js/main.3088d316.js"
   ]
 }
