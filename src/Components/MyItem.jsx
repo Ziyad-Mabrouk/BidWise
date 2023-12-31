@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import "../Styles/Product.css";
 import { Link } from 'react-router-dom';
+import ProductContext from "../ProductContext";
+import { useContext } from 'react';
+import { db } from "../firebase";
+import { doc, deleteDoc } from "firebase/firestore";
 
 const MyItem = ({ product }) => {
   const [remainingTime, setRemainingTime] = useState(calculateRemainingTime(product.enddate));
+  const { setSelectedProduct } = useContext(ProductContext);
+
 
   useEffect(() => {
     // Update remaining time every second
@@ -41,7 +47,22 @@ const MyItem = ({ product }) => {
   
     return `${formattedDays}:${formattedHours}:${formattedMinutes}`;
   }
-  
+
+  const handleDelete = async () => {
+    const productDocRef = doc(db, "itemdetails", product.id);
+    try {
+      await deleteDoc(productDocRef);
+      alert("Item successfully deleted!");
+    } catch (error) {
+      alert("Error deleting item!");
+      console.error("Error removing Item: ", error);
+    }
+  };
+
+  const handleViewDetailsClick = () => {
+    setSelectedProduct(product);
+  };
+
 
   return (
     <div className='product'>
@@ -78,10 +99,10 @@ const MyItem = ({ product }) => {
         </div>
 
         <div className='product-buttons'>
-          <Link to={"/BidWise/Product/" + product.name}>
-                <button id="view-details-btn">View Details</button>
+          <Link to={"/BidWise/ProductDetails/" + product.id}>
+                <button id="view-details-btn" onClick={handleViewDetailsClick}>View Details</button>
           </Link>
-          <button id="delete-btn">Delete</button>
+          <button id="delete-btn" onClick={handleDelete}>Delete</button>
         </div>
       </div>
     </div>

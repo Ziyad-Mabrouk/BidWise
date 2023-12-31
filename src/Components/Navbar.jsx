@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 import UserContext from "../UserContext";
 
@@ -24,10 +24,13 @@ const Navbar = () => {
   const { username } = useContext(UserContext);
   const { setUsername } = useContext(UserContext);
 
+  const navigate = useNavigate();
+
   const OnLogout = () => {
     //logout the user
     alert("Logged out");
     setUsername("");
+    navigate("/BidWise/")
   };
 
   // States to manage dropdown visibility

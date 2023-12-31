@@ -129,7 +129,7 @@ const ProductDetails = () => {
             product_top_bidder
         );
       }
-      // end give money back to extobidder
+      // end give money back to ex-topbidder
 
       // start update new bidder solde and make him topbidder
       const querySnapshot = await getDocs(
@@ -196,7 +196,7 @@ const ProductDetails = () => {
           </div>
 
           <div className="product-details-price">
-            <p id="product-actual-bid">{"Actual Bid: " + product_price}</p>
+            <p id="product-actual-bid">{"Actual Bid: " + product_price + " MAD"}</p>
 
             <div className="bid-slider-btn">
               <div className="bid-displayer">{bid}</div>

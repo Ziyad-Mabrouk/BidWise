@@ -15,6 +15,7 @@ import ScrollToTop from "./ScrollToTop";
 import ProductDetails from "./Pages/ProductDetails";
 import UserContext from "./UserContext";
 import ProductContext from "./ProductContext";
+import HumanVerification from "./Pages/HumanVerification";
 
 const App = () => {
   const [username, setUsername] = useState(""); //use usestate and usercontext to pass the username between elements
@@ -41,6 +42,10 @@ const App = () => {
               <Route path="/BidWise/Payment/" element={<Payment />} />
               <Route path="/BidWise/MyItems/" element={<MyItems />} />
               <Route path="/BidWise/MyBids/" element={<MyBids />} />
+              <Route
+                path="/BidWise/HumanVerification/"
+                element={<HumanVerification />}
+              />
               <Route
                 path="/BidWise/ProductDetails/:id"
                 element={<ProductDetails />}

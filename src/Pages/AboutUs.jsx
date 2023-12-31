@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const AboutUs = () => {
   return (
@@ -7,14 +7,14 @@ const AboutUs = () => {
       <h2>Projet Personnel et Professionnel</h2>
       <span>
         projet réalisé par:
-            -Krima Idriss
-            -Mabrouk Ziyad
-            -Quehlaoui Mohamed
-            -Lansari Ibrahim
-            -Achach Aimane
+        -Krima Idriss
+        -Mabrouk Ziyad
+        -Quehlaoui Mohamed
+        -Lansari Ibrahim
+        -Achach Aimane
       </span>
     </div>
-  )
-}
+  );
+};
 
-export default AboutUs
+export default AboutUs;

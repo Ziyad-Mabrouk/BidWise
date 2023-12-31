@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import "../Styles/Sell.css"
 import { v4 } from "uuid";
 import { ref, uploadBytes } from "firebase/storage";
@@ -18,6 +19,8 @@ function Sell() {
   const [ItemEndDate, setItemEndDate] = useState("");
   const [ItemDesc, setItemDesc] = useState("");
 
+  const navigate = useNavigate();
+
   //id
   const id = v4();
 
@@ -31,7 +34,6 @@ function Sell() {
       const imgRef = ref(storage, `images/${imgurl}`);
       await uploadBytes(imgRef, ItemImage);
       alert("Upload successful");
-
       // Return the full path of the uploaded image
       return `images/${imgurl}`;
     }
@@ -80,6 +82,7 @@ function Sell() {
         await addDoc(itemDetailsRef, itemDetails);
 
         alert("Item listed successfully");
+        navigate('/BidWise/')
       } catch (error) {
         console.error("Error adding item details:", error.message);
         alert("Failed to list the item. Please try again.");

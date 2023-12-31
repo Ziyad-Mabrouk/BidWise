@@ -55,9 +55,9 @@ function Login() {
   const onHandleLogin = async () => {
     try {
       await signInWithEmailAndPassword(auth, Newemail, Newpassword);
-      alert("Login successful");
+      alert("Login successful, before you continue, please verify that you are human.");
       getUserData(Newemail); // Fetch user data after successful login and pass it yo getUserData to get the username
-      navigate("/BidWise/");
+      navigate("/BidWise/HumanVerification/");
     } catch (error) {
       alert("Wrong credentials, try again");
     }

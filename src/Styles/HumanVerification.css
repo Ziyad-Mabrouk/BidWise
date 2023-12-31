@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.human-verification {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#hv-h1{
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.hv-username {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.hv-text{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.hv-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.bot-div {
+    width: 50%;
+}
+
+#happy-bot-img, #verify-bot-img {
+    margin: 0 15%;
+    height: auto;
+}
+
+#happy-bot-img {
+    width: 320px;
+}
+
+#verify-bot-img {
+    width: 400px;
+}
+
+.distance-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.distance-and-img-div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+}
+
+#sensor-img {
+    width: 150px;
+    height: auto;
+}
+
+.distance-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 200px;
+    background: #fff;
+    border-radius: 10px;
+    border: 3px solid #404040;
+    gap: 4px;
+}
+
+#distance-box-h1 {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+#distance-far, #distance-close {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#distance-far {
+    color: #b32f1e;
+}
+
+#distance-close {
+    color: #279c34;
+}
+
+.response-text {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+#done-btn {
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #009311;
+    color: #fff;
+}
+
+#done-btn:hover {
+    cursor: pointer;
+    background: #00830f;
+}
+
+#done-btn:active {
+    background: #006e0d;
+}
