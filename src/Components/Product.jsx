@@ -4,6 +4,8 @@ import heart_normal from "../Images/heart-normal.svg";
 import heart_active from "../Images/heart-active.svg";
 import { Link } from "react-router-dom";
 import ProductContext from "../ProductContext";
+import { db } from "../firebase";
+import { doc, deleteDoc } from "firebase/firestore";
 
 const Product = ({ product }) => {
   const [isFavorite, setIsFavorite] = useState(false);
@@ -47,6 +49,22 @@ const Product = ({ product }) => {
     const remainingSeconds = totalSeconds % (24 * 3600);
     const hours = Math.floor(remainingSeconds / 3600);
     const minutes = Math.floor((remainingSeconds % 3600) / 60);
+
+    const handleDelete = async () => {
+      const productDocRef = doc(db, "itemdetails", product.id);
+      try {
+        await deleteDoc(productDocRef);
+        alert("Item successfully deleted!");
+      } catch (error) {
+        alert("Error deleting item!");
+        console.error("Error removing Item: ", error);
+      }
+    };
+
+    if (days === 0 && hours === 0 && minutes === 0) {
+      handleDelete();
+    }
+
     //const seconds = remainingSeconds % 60;
 
     // Format values with leading zeros

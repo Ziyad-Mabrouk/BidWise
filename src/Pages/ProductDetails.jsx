@@ -106,31 +106,13 @@ const ProductDetails = () => {
   };
 
   const handleBidClick = async () => {
+    var valid = true;
+    console.log(valid + "0");
     const productDocRef = doc(db, "itemdetails", product_id);
     const usersCollectionRef = collection(db, "users");
     let userDocRef; // Declare userDocRef here
 
     try {
-      // start give money back to extobidder
-      const querySnapshot0 = await getDocs(
-        query(usersCollectionRef, where("name", "==", product_top_bidder))
-      );
-      if (!querySnapshot0.empty) {
-        userDocRef = querySnapshot0.docs[0].ref;
-        let exsolde = querySnapshot0.docs[0].data().Solde;
-
-        await updateDoc(userDocRef, {
-          Solde: exsolde + product_top_bid,
-        });
-        alert(
-          "Money: " +
-            product_top_bid +
-            " has been given to the previous top bidder: " +
-            product_top_bidder
-        );
-      }
-      // end give money back to ex-topbidder
-
       // start update new bidder solde and make him topbidder
       const querySnapshot = await getDocs(
         query(usersCollectionRef, where("name", "==", username))
@@ -139,25 +121,47 @@ const ProductDetails = () => {
         userDocRef = querySnapshot.docs[0].ref;
       }
 
-      await updateDoc(productDocRef, {
-        TOPBID: bid,
-        TopBidder: username,
-      });
-
       let a = soldee - bid;
-      setSolde(a);
 
       if (a < 0) {
         alert("Not enough money, you can't bid...Charge your card");
+        valid = false;
       } else {
         // If there's enough money, update the document
-        await updateDoc(userDocRef, {
+        setSolde(a);
+        await updateDoc(productDocRef, {
+          TOPBID: bid,
+          TopBidder: username,
           Solde: a,
         });
-
         alert("Your current solde is: " + a);
       }
       // end update new bidder solde and make him topbidder
+      //
+      console.log(valid + "1");
+      if (valid === true) {
+        // start give money back to extobidder
+        const querySnapshot0 = await getDocs(
+          query(usersCollectionRef, where("name", "==", product_top_bidder))
+        );
+        if (!querySnapshot0.empty) {
+          userDocRef = querySnapshot0.docs[0].ref;
+          let exsolde = querySnapshot0.docs[0].data().Solde;
+
+          await updateDoc(userDocRef, {
+            Solde: exsolde + product_top_bid,
+          });
+          alert(
+            "Money: " +
+              product_top_bid +
+              " has been given to the previous top bidder: " +
+              product_top_bidder
+          );
+        } else {
+          console.log("noone");
+        }
+        // end give money back to extobidder
+      }
     } catch (error) {
       alert(error);
     }
@@ -196,7 +200,7 @@ const ProductDetails = () => {
           </div>
 
           <div className="product-details-price">
-            <p id="product-actual-bid">{"Actual Bid: " + product_price + " MAD"}</p>
+            <p id="product-actual-bid">{"Actual Bid: " + product_price}</p>
 
             <div className="bid-slider-btn">
               <div className="bid-displayer">{bid}</div>
