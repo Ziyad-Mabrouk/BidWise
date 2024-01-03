@@ -37,7 +37,7 @@ const HumanVerification = () => {
 
   useEffect(() => {
     const updateColor = () => {
-      if (currentDistance < 20) {
+      if (currentDistance < 10) {
         setDistanceColor('distance-close');
         setIsHuman(true);
       } else {

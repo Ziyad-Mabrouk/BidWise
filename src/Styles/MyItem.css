@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.my-item {
+    display: grid;
+    grid-template-columns: 153px 153px;
+    border-radius: 20px;
+    width: 360px;
+    height: 206px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
+    margin: 20px;
+}
+
+.my-item-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 153px;
+    height: 206px;
+    border-radius: 20px 0px 0px 20px;
+    background: rgb(255, 255, 255);
+}
+
+#product-image {
+    width: 147px;
+    height: 147px;
+    max-width: 147px;
+    max-height: 147px;
+    margin: 3px;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#top-bid {
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+#product-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #860f0f;
+    padding-right: 10px;
+}
+
+.my-item-details {
+    display: flex;
+    flex-direction: column;
+    width: 213px;
+    height: 206px;
+    border-radius: 0px 20px 20px 0px;
+    background: rgb(166,158,255);
+    background: linear-gradient(130deg, rgba(255,255,255,1) 0% ,rgba(166,158,255,1) 200%);
+    padding: 10px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#product-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0px 0px 0px 0px;
+}
+
+#product-description {
+    font-size: 9px;
+    font-weight: 400;
+    margin: 5px 0px 10px 0px;
+    height: 40px;
+}
+
+.my-item-timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #206BFF;
+}
+
+#ends-in {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0px 0px 0px 0px;
+    align-self: flex-start;
+}
+
+#expiration-time {
+    font-family: 'Quantico', sans-serif;
+    font-size: 28px;
+    margin: 0px 0px 0px 0px;
+    align-self: center;
+}
+
+.labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: -10px;
+}
+
+#my-item-label-days {
+    font-family: 'Quantico', sans-serif;
+    font-size: 10px;
+    margin-left: 15px;
+}
+
+#my-item-label-hours {
+    font-family: 'Quantico', sans-serif;
+    font-size: 10px;
+    margin-left: 20px;
+}
+
+#my-item-label-minutes {
+    font-family: 'Quantico', sans-serif;
+    font-size: 10px;
+    margin-left: 13px;
+}
+
+#my-item-label-seconds {
+    font-family: 'Quantico', sans-serif;
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.product-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#bid-button {
+    background: rgb(0,68,16);
+    background: linear-gradient(135deg, rgba(0,68,16,1) 0%, rgba(9,177,0,1) 100%);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+}
+
+#bid-button:hover {
+    background: rgb(33,81,44);
+    background: linear-gradient(135deg, rgba(33,81,44,1) 0%, rgba(75,177,69,1) 100%);
+    color: #fff;
+}
+
+#bid-button:active {
+    background: rgb(0,43,10);
+    background: linear-gradient(135deg, rgba(0,43,10,1) 0%, rgba(7,122,0,1) 100%);
+    color: #fff;
+}
+
+#favorite-button {
+    width: 20px;
+    margin-right: 5px;
+}
+
+#favorite-button:hover {
+    cursor: pointer;
+    content: url("../Images/heart-hover.svg");
+}
+
+#details-btn {
+    background: rgb(135,133,133);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    height: 30px;
+    width: 50px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+#details-btn:hover {
+    background: rgb(179, 176, 176);;
+}
+
+#details-btn:active {
+    background: rgb(135,133,133);
+    background: linear-gradient(90deg, rgba(135,133,133,1) 0%, rgba(218,216,215,1) 100%);
+}
+
+#end-btn {
+    background: rgb(30, 168, 232);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    height: 30px;
+    width: 50px;
+    border-radius: 5px;
+}
+
+#end-btn:hover {
+    background: rgb(5, 126, 182);
+}
+
+#end-btn:active {
+    background: rgb(30, 168, 232);;
+}
+
+#my-item-delete-btn {
+    background: #D11A2A;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    height: 30px;
+    width: 50px;
+    border-radius: 5px;
+}
+
+#my-item-delete-btn:hover {
+    background: #df4956;
+}
+
+#my-item-delete-btn:active {
+    background: #D11A2A;
+}

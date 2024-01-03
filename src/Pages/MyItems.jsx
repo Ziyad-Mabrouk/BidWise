@@ -39,7 +39,7 @@ const MyItems = () => {
               enddate: data.endDate,
               image: imageUrl,
               owner: data.ItemOwner,
-              topbid: data.TOPBID,
+              topbidder: data.TopBidder,
             });
           }
         } catch (error) {

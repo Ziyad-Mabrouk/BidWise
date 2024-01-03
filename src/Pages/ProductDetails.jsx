@@ -9,20 +9,20 @@ import heart from "../Images/heart.png";
 import share from "../Images/share.png";
 import report from "../Images/report.png";
 import Product from "../Components/Product";
-import product1 from "../Images/product 1.png";
-import product2 from "../Images/product 2.png";
 import ProductContext from "../ProductContext";
 import UserContext from "../UserContext";
 import { useState, useEffect, useContext } from "react";
 import { db, storage } from "../firebase";
-import { collection, getDocs } from "@firebase/firestore";
+import { collection, getDocs, getDoc } from "@firebase/firestore";
 import { doc, updateDoc } from "firebase/firestore";
 import { ref, getDownloadURL } from "@firebase/storage";
 import { query, where } from "firebase/firestore";
+import { arrayUnion, arrayRemove } from "firebase/firestore";
 
 const ProductDetails = () => {
   const [soldee, setSoldee] = useState("");
-  const { setSolde } = useContext(UserContext);
+  const [ownerEmail, setOwnerEmail] = useState("");
+  const { setSolde, Solde } = useContext(UserContext);
   const { username } = useContext(UserContext);
   const { selectedProduct } = useContext(ProductContext);
   const product_img = selectedProduct.image;
@@ -37,6 +37,17 @@ const ProductDetails = () => {
   const product_top_bid = Number(selectedProduct.topbid);
 
   const [similarProducts, setSimilarProducts] = useState([]);
+
+  const fetchOwnerMail = async () => {
+    const usersRef = collection(db, "users");
+    const users_snapshot = await getDocs(usersRef);
+    for (const doc of users_snapshot.docs) {
+      const user = doc.data();
+      if (user.name === product_owner) {
+        setOwnerEmail(user.email);
+      }
+    }
+  };
 
   const fetchData = async () => {
     const collectionRef = collection(db, "itemdetails");
@@ -76,6 +87,7 @@ const ProductDetails = () => {
             enddate: data.endDate,
             image: imageUrl,
             owner: data.ItemOwner,
+            topbidder: data.TopBidder,
           });
         } catch (error) {
           console.error(
@@ -93,6 +105,7 @@ const ProductDetails = () => {
 
   useEffect(() => {
     fetchData();
+    fetchOwnerMail();
   }, []);
 
   const handleUpBid = () => {
@@ -120,19 +133,33 @@ const ProductDetails = () => {
       if (!querySnapshot.empty) {
         userDocRef = querySnapshot.docs[0].ref;
       }
-
-      let a = soldee - bid;
+      console.log("solde before bid", Solde);
+      console.log("bid", bid);
+      let a = Solde - bid;
+      console.log("solde after bid", a);
 
       if (a < 0) {
         alert("Not enough money, you can't bid...Charge your card");
         valid = false;
       } else {
-        // If there's enough money, update the document
+        //////////////////// If there's enough money, update the document///////////////////////////////
         setSolde(a);
+        //lostbidders array
+        const productDoc = await getDoc(productDocRef);
+        const previousTopBidder = productDoc.data().TopBidder;
+        if (previousTopBidder) {
+          // Move the previous top bidder to the lostBidders array
+
+          await updateDoc(productDocRef, {
+            lostBidders: arrayUnion(previousTopBidder),
+          });
+        }
+
         await updateDoc(productDocRef, {
           TOPBID: bid,
           TopBidder: username,
           Solde: a,
+          lostBidders: arrayRemove(username), // Move the previous top bidder to the lostBidders array
         });
         alert("Your current solde is: " + a);
       }
@@ -234,9 +261,13 @@ const ProductDetails = () => {
         <p id="long-description-text">{product_long_description}</p>
       </div>
 
-      <p id="product-owner">{"Owner: " + product_owner}</p>
+      <div className="product-owner-div">
+        <h2 id="product-owner">Owner: </h2>
+        <p id="product-owner-name">{product_owner}</p>
+        <a id="contact-owner" href={"mailto:" + ownerEmail}>Contact Owner</a>
+      </div>
 
-      <p id="product-owner">
+      <p id="product-topbidder">
         {product_top_bidder === ""
           ? "Top Bidder: No one"
           : "Top Bidder: " + product_top_bidder}

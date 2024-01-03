@@ -44,7 +44,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <p className='about-us-sub'>Superevides by: Pr. Idrissi Hamza Kamal</p>
+      <p className='about-us-sub'>Superevised by: Pr. Idrissi Hamza Kamal</p>
 
       <img id="inpt-logo" src={inpt} alt='inpt logo'/>
     </div>

@@ -289,10 +289,42 @@
     margin-bottom: 10px;
 }
 
-#product-owner {
+.product-owner-div {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#product-topbidder {
     padding: 10px 20px;
     font-size: 15px;
     font-weight: 700;
     color: #0D6EFD;
     margin-bottom: 5px;
+}
+
+#product-owner, #product-owner-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0D6EFD;
+    margin-bottom: 5px;
+}
+
+#product-owner-name {
+    margin-left: 5px;
+}
+
+#contact-owner {
+    font-size: 15px;
+    font-weight: 700;
+    color: #002357;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+#contact-owner:hover {
+    text-decoration: underline;
 }

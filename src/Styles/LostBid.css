@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product {
+    display: grid;
+    grid-template-columns: 153px 153px;
+    border-radius: 20px;
+    width: 306px;
+    height: 206px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
+    margin: 20px;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 153px;
+    height: 206px;
+    border-radius: 20px 0px 0px 20px;
+    background: rgb(255, 255, 255);
+}
+
+#product-image {
+    width: 147px;
+    height: 147px;
+    max-width: 147px;
+    max-height: 147px;
+    margin: 3px;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#top-bid {
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+#product-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #860f0f;
+    padding-right: 10px;
+}
+
+.lost-bid-details {
+    display: flex;
+    flex-direction: column;
+    height: 153px;
+    height: 206px;
+    border-radius: 0px 20px 20px 0px;
+    background: rgb(255, 87, 87);
+    background: linear-gradient(130deg, rgb(255, 255, 255) 0% ,rgb(255, 95, 95) 150%);
+    padding: 10px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#product-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0px 0px 0px 0px;
+}
+
+#product-description {
+    font-size: 9px;
+    font-weight: 400;
+    margin: 5px 0px 10px 0px;
+    height: 40px;
+}
+
+.lostbid-timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #970000;
+}
+
+#lostbid-ends-in {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0px 0px 0px 0px;
+    align-self: flex-start;
+}
+
+#expiration-time {
+    font-family: 'Quantico', sans-serif;
+    font-size: 28px;
+    margin: 0px 0px 0px 0px;
+    align-self: center;
+}
+
+.labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: -10px;
+}
+
+#label-days {
+    font-family: 'Quantico', sans-serif;
+    font-size: 10px;
+    margin-left: 7px;
+}
+
+#label-hours {
+    font-family: 'Quantico', sans-serif;
+    font-size: 10px;
+    margin-left: 22px;
+}
+
+#label-minutes {
+    font-family: 'Quantico', sans-serif;
+    font-size: 10px;
+    margin-left: 13px;
+}
+
+.product-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#outbid-button {
+    background: rgb(255, 40, 40);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+}
+
+#outbid-button:hover {
+    background: rgb(167, 2, 2);
+}
+
+#outbid-button:active {
+    background: rgb(255, 40, 40);
+}
+
+#favorite-button {
+    width: 20px;
+    margin-right: 5px;
+}
+
+#favorite-button:hover {
+    cursor: pointer;
+    content: url("../Images/heart-hover.svg");
+}
+
+#view-details-btn {
+    background: rgb(135,133,133);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+#view-details-btn:hover {
+    background: rgb(179, 176, 176);;
+}
+
+#view-details-btn:active {
+    background: rgb(135,133,133);
+    background: linear-gradient(90deg, rgba(135,133,133,1) 0%, rgba(218,216,215,1) 100%);
+}
+
+#delete-btn {
+    background: #D11A2A;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+}
+
+#delete-btn:hover {
+    background: #df4956;
+}
+
+#delete-btn:active {
+    background: #D11A2A;
+}

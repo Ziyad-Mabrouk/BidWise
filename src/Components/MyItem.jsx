@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import "../Styles/Product.css";
+import "../Styles/MyItem.css";
 import { Link } from 'react-router-dom';
 import ProductContext from "../ProductContext";
 import { useContext } from 'react';
 import { db } from "../firebase";
-import { doc, deleteDoc } from "firebase/firestore";
+import { doc, deleteDoc, updateDoc } from "firebase/firestore";
 
 const MyItem = ({ product }) => {
   const [remainingTime, setRemainingTime] = useState(calculateRemainingTime(product.enddate));
@@ -37,15 +37,15 @@ const MyItem = ({ product }) => {
     const remainingSeconds = totalSeconds % (24 * 3600);
     const hours = Math.floor(remainingSeconds / 3600);
     const minutes = Math.floor((remainingSeconds % 3600) / 60);
-    //const seconds = remainingSeconds % 60;
+    const seconds = remainingSeconds % 60;
   
     // Format values with leading zeros
     const formattedDays = String(days).padStart(2, '0');
     const formattedHours = String(hours).padStart(2, '0');
     const formattedMinutes = String(minutes).padStart(2, '0');
-    //const formattedSeconds = String(seconds).padStart(2, '0');
+    const formattedSeconds = String(seconds).padStart(2, '0');
   
-    return `${formattedDays}:${formattedHours}:${formattedMinutes}`;
+    return `${formattedDays}:${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
   }
 
   const handleDelete = async () => {
@@ -63,10 +63,24 @@ const MyItem = ({ product }) => {
     setSelectedProduct(product);
   };
 
+  const handleEnd = async () => {
+    const productDocRef = doc(db, "itemdetails", product.id);
+    try {
+      await updateDoc(productDocRef,{
+        endDate: new Date().toISOString(),
+      });
+      alert("Item successfully ended!");
+    } catch (error) {
+      alert("Error ending item!");
+      console.error("Error ending Item: ", error);
+    }
+  };
+    
+
 
   return (
-    <div className='product'>
-      <div className='image'>
+    <div className='my-item'>
+      <div className='my-item-image'>
         <img src={product.image} alt='product' id="product-image" />
         <div className='price'>
           <p id="top-bid">Top Bid:</p>
@@ -74,7 +88,7 @@ const MyItem = ({ product }) => {
         </div>
       </div>
 
-      <div className='details'>
+      <div className='my-item-details'>
         <div className='text'>
           <h1 id="product-title">
             {product.name.length <= 16
@@ -88,21 +102,23 @@ const MyItem = ({ product }) => {
           </p>
         </div>
 
-        <div className='timer'>
+        <div className='my-item-timer'>
           <p id="ends-in">Ends in:</p>
           <p id="expiration-time">{remainingTime}</p>
           <div className='labels'>
-            <p className="label" id="label-days">Days</p>
-            <p className="label" id="label-hours">Hours</p>
-            <p className="label" id="label-minutes">Minutes</p>
+            <p className="label" id="my-item-label-days">Days</p>
+            <p className="label" id="my-item-label-hours">Hours</p>
+            <p className="label" id="my-item-label-minutes">Minutes</p>
+            <p className="label" id="my-item-label-seconds">Seconds</p>
           </div>
         </div>
 
         <div className='product-buttons'>
           <Link to={"/BidWise/ProductDetails/" + product.id}>
-                <button id="view-details-btn" onClick={handleViewDetailsClick}>View Details</button>
+                <button id="details-btn" onClick={handleViewDetailsClick}>Details</button>
           </Link>
-          <button id="delete-btn" onClick={handleDelete}>Delete</button>
+          <button id="end-btn" onClick={handleEnd}>End</button>
+          <button id="my-item-delete-btn" onClick={handleDelete}>Delete</button>
         </div>
       </div>
     </div>

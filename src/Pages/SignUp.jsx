@@ -51,6 +51,7 @@ function SignUp() {
 
       //zid user
       await addDoc(usersCollectionRef, {
+        Solde: 40000,
         name: Newname,
         email: Newemail,
         password: Newpassword,

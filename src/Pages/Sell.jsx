@@ -75,6 +75,7 @@ function Sell() {
         imageUrl: imgUrl,
         TOPBID: StartingPrice,
         TopBidder: "",
+        LostBidders: [],
       };
 
       try {
