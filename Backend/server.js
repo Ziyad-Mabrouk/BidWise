@@ -14,7 +14,7 @@ app.use(cors({
 
 
 app.get("/get_distance", async (req, res) => {
-    const response = await axios.get('http://192.168.59.35:5050/get_distance')
+    const response = await axios.get('http://127.0.0.1:5050/get_distance')
     res.send(response.data);
 });
 

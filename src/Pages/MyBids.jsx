@@ -137,7 +137,7 @@ const MyBids = () => {
         {lostBidsList.map((product, index) => (
           <LostBid key={index} product={product} />
         ))}
-        {productList.length === 0 && (
+        {lostBidsList.length === 0 && (
           <p>You have no lost bids.</p>
         )}
       </div>

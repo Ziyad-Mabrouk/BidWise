@@ -120,7 +120,7 @@ const ProductDetails = () => {
 
   const handleBidClick = async () => {
     var valid = true;
-    console.log(valid + "0");
+    //console.log(valid + "0");
     const productDocRef = doc(db, "itemdetails", product_id);
     const usersCollectionRef = collection(db, "users");
     let userDocRef; // Declare userDocRef here
