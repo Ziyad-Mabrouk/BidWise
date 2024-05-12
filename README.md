@@ -12,3 +12,7 @@ Un site web d'enchères attrayant, convivial et fiable, offrant une interface in
 - Quehlaoui Mohamed
 - Lansari Ibrahim
 - Achach Aimane
+
+## Démonstration (Vidéo):
+
+https://github.com/Ziyad-Mabrouk/BidWise/assets/125457402/efee5a4e-fee2-4729-a68f-cf4ddbd50fe2
