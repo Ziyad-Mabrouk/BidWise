@@ -16,3 +16,7 @@ Un site web d'enchères attrayant, convivial et fiable, offrant une interface in
 ## Démonstration (Vidéo):
 
 https://github.com/Ziyad-Mabrouk/BidWise/assets/125457402/efee5a4e-fee2-4729-a68f-cf4ddbd50fe2
+
+## Déploiement:
+
+![bidwise_highlevel](https://github.com/user-attachments/assets/71de8ce1-4431-4120-94d7-330f36c71c88)
